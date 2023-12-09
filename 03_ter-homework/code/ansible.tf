@@ -14,7 +14,7 @@ resource "null_resource" "web_hosts_provision" {
   depends_on = [yandex_compute_instance.storage]
 
   provisioner "local-exec" {
-    command = "sleep 100"
+    command = var.web_hosts_provis
   }
 
   provisioner "local-exec" {
@@ -25,6 +25,6 @@ resource "null_resource" "web_hosts_provision" {
     triggers = {
       always_run         = "${timestamp()}"
       playbook_src_hash  = file("${abspath(path.module)}/test.yml")
-      ssh_public_key     = local.ssh-keys
+      ssh_public_key     = var.public_key
     }
   }
