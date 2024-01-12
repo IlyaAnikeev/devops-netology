@@ -1,0 +1,20 @@
+$clickhouse_name = "clickhouse-vector"
+$clickhouse_ip = "192.168.56.70"
+$box = "centos/7"
+$ssh_public_key_path = "~/.ssh/id_rsa.pub"
+
+Vagrant.configure("2") do |config|
+  config.vm.define $clickhouse_name do |config|
+    config.vm.provider "virtualbox" do |vb|
+      vb.cpus = "2"
+      vb.memory = "4096"
+    end
+    config.vm.box = $box
+    config.vm.hostname = $clickhouse_name
+    config.vm.network "private_network", ip: $clickhouse_ip
+    config.vm.provision 'file', 
+        source: $ssh_public_key_path, 
+        destination: '~/.ssh/authorized_keys'
+  end
+end
+
