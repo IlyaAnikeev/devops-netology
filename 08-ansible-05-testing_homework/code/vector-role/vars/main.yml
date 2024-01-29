@@ -1,0 +1,5 @@
+---
+vector_path: "/opt/vector"
+vector_config: "{{ vector_path }}/config/vector.yaml"
+allow_world_readable_tmpfiles: true
+

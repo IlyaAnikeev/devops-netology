@@ -1,0 +1,24 @@
+galaxy_info:
+  role_name: vector
+  namespace: anikeevilya
+  author: Anikeev Ilya
+  description: Install Vector
+  company: netology
+
+  license: MIT
+
+  min_ansible_version: 2.1
+
+  # platforms:
+  #   - name: Debian
+  #     versions:
+  #     - 11
+  #     - 12
+  #   - name: Ubuntu
+  #     versions:
+  #     - bionic
+
+  galaxy_tags: 
+    - vector
+
+dependencies: []  
