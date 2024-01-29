@@ -97,9 +97,9 @@
 
 `molecule init scenario podman --driver-name=docker`
 
-1. Добавьте в директорию с vector-role файлы из [директории](./example) tox.ini и tox-requirements.txt.
+1. Добавил в директорию с vector-role файлы из [директории](./example) tox.ini и tox-requirements.txt.
 
-2. Запустиk docker run --privileged=True -v /home/ilya/ansible/vector-role:/opt/vector-role -w /opt/vector-role -it aragast/netology:latest /bin/bash
+2. Запустил docker run --privileged=True -v /home/ilya/ansible/vector-role:/opt/vector-role -w /opt/vector-role -it aragast/netology:latest /bin/bash
 
 3. Внутри контейнера выполнил команду `tox`, посмотрел на вывод.
 
@@ -107,7 +107,7 @@
 
 ![vers](img/1_9.png)
 
-5. 5. Прописал правильную команду в `tox.ini`:
+5. Прописал правильную команду в `tox.ini`:
 
 ![vers](img/1_10.png)
 
