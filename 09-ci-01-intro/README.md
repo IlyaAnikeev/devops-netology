@@ -93,3 +93,8 @@
 10. Timeline:
 
 ![vers](img/1_8_4_timeline.png)
+
+11. XML
+
+- [bug_xml](https://github.com/IlyaAnikeev/devops-netology/blob/main/09-ci-01-intro/code/Bug.xml)
+- [other_xml](https://github.com/IlyaAnikeev/devops-netology/blob/main/09-ci-01-intro/code/Other.xml)
