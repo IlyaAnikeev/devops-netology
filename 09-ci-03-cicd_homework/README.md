@@ -8,7 +8,7 @@
 4. Запустите playbook, ожидайте успешного завершения.
 5. Проверьте готовность SonarQube через [браузер](http://localhost:9000).
 6. Зайдите под admin\admin, поменяйте пароль на свой.
-7.  Проверьте готовность Nexus через [бразуер](http://localhost:8081).
+7. Проверьте готовность Nexus через [бразуер](http://localhost:8081).
 8. Подключитесь под admin\admin123, поменяйте пароль, сохраните анонимный доступ.
 
 ## Знакомоство с SonarQube
@@ -31,12 +31,12 @@
 
 1. В репозиторий `maven-public` загрузите артефакт с GAV-параметрами:
 
- *    groupId: netology;
- *    artifactId: java;
- *    version: 8_282;
- *    classifier: distrib;
- *    type: tar.gz.
-   
+- groupId: netology;
+- artifactId: java;
+- version: 8_282;
+- classifier: distrib;
+- type: tar.gz.
+
 2. В него же загрузите такой же артефакт, но с version: 8_102.
 3. Проверьте, что все файлы загрузились успешно.
 4. В ответе пришлите файл `maven-metadata.xml` для этого артефекта.
@@ -64,7 +64,7 @@
 
 ## Подготовка к выполнению
 
-1. Создал две VM в Yandex Cloud с параметрами: 2CPU 4RAM Centos7 (остальное по минимальным требованиям) с помощью [terraform]():
+1. Создал две VM в Yandex Cloud с параметрами: 2CPU 4RAM Centos7 (остальное по минимальным требованиям) с помощью [terraform](https://github.com/IlyaAnikeev/devops-netology/tree/main/09-ci-03-cicd_homework/code/terraform):
 
 ![vers](img/1_1_create_vm.png)
 
@@ -88,7 +88,7 @@
 
 ### Основная часть
 
-1. Создал новый	проект: `netology_cicd`.
+1. Создал новый проект: `netology_cicd`.
 
 2. Скачал пакет sonar-scanner.
 
@@ -124,21 +124,21 @@
 
 1. В репозиторий `maven-public` загрузите артефакт с GAV-параметрами:
 
- *    groupId: netology;
- *    artifactId: java;
- *    version: 8_282;
- *    classifier: distrib;
- *    type: tar.gz:
- 
+- groupId: netology;
+- artifactId: java;
+- version: 8_282;
+- classifier: distrib;
+- type: tar.gz:
+
 ![vers](img/1_10_1_nex_java.png)
- 
+
 2. В него же загрузил такой же артефакт, но с version 8_102:
 
 3. Проверил, что все файлы загрузились успешно:
 
 ![vers](img/1_10_2_nex_java.png)
 
-4. Файл [maven-metadata.xml]()
+4. Файл [maven-metadata.xml](https://github.com/IlyaAnikeev/devops-netology/tree/main/09-ci-03-cicd_homework/code/mvn)
 
 ### Знакомство с Maven
 
@@ -168,6 +168,4 @@
 
 ![vers](img/1_13_art.png)
 
-4. Файл [pom.xml]().
-
-
+4. Файл [pom.xml](https://github.com/IlyaAnikeev/devops-netology/tree/main/09-ci-03-cicd_homework/code/mvn).
