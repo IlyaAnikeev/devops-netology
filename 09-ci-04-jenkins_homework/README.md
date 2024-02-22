@@ -120,13 +120,13 @@
 ![vers](img/1_8_2_node_script_change.png)
 
 
-7. Проверил работоспособность, исправил ошибки, исправленный Pipeline вложил в репозиторий в файл [`ScriptedJenkinsfile`]().
+7. Проверил работоспособность, исправил ошибки, исправленный Pipeline вложил в репозиторий в файл [`ScriptedJenkinsfile`](https://github.com/IlyaAnikeev/devops-netology/blob/main/09-ci-04-jenkins_homework/pipeline/ScriptedJenkinsfile).
 
 ![vers](img/1_8_3_script_success.png)
 
 ![vers](img/1_8_4_script_stage_view.png)
 
-8. Отправить ссылку на репозиторий с ролью и [Declarative Pipeline](https://github.com/IlyaAnikeev/vector-role/blob/main/Jenkinsfile) и [Scripted Pipeline]().
+8. Ссылка на репозиторий с ролью и [Declarative Pipeline](https://github.com/IlyaAnikeev/vector-role/blob/main/Jenkinsfile) и [Scripted Pipeline](https://github.com/IlyaAnikeev/devops-netology/blob/main/09-ci-04-jenkins_homework/pipeline/ScriptedJenkinsfile).
 
 
 
