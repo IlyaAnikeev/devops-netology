@@ -87,7 +87,7 @@
 
 ![vers](img/1_9_2_art_ok.png)
 
-8. Мигрируйте `build configuration` в репозиторий.
+8. Мигрировал `build configuration` в репозиторий.
 
 ![vers](img/1_10_build_conf.png)
 
