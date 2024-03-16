@@ -99,7 +99,7 @@
 
 ### DevOps
 
-1. Собрал образ согласно заданию (ссылка на [файлы с кодом]()): 
+1. Собрал образ согласно заданию (ссылка на [файлы с кодом](https://github.com/IlyaAnikeev/devops-netology/tree/main/09-ci-06-gitlab_homework/code)): 
 
 ![vers](img/7_1_projectfull.png)
 
