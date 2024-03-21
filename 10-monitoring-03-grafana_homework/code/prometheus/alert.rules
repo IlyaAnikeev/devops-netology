@@ -1,0 +1,12 @@
+groups: 
+- name: InstanceDown
+  rules:
+  - alert: Instance Down!!
+    expr: up == 0
+    for: 0m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Prometheus потерял связь с (instance {{ $labels.instance }})"
+      description: "A Prometheus target has disappeared. An exporter might be crashed. VALUE = {{ $value }}  LABELS: {{ $labels }}"
+
