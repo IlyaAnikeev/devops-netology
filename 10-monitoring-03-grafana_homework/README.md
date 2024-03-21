@@ -89,23 +89,23 @@
 
 - Создал Dashboard и в ней создал Panels:
 
-  - утилизация CPU для nodeexporter (в процентах, 100-idle) (утилизация CPU для nodeexporter (в процентах, 100-idle): `100 - (avg by (instance) (rate(node_cpu_seconds_total{job="node",mode="idle"}[1m])) * 100)`):
+&#x1F53D;утилизация CPU для nodeexporter (в процентах, 100-idle) (утилизация CPU для nodeexporter (в процентах, 100-idle): `100 - (avg by (instance) (rate(node_cpu_seconds_total{job="node",mode="idle"}[1m])) * 100)`):
 
 ![vers](img/5_1_cpu_idle_100.png)
 
-  - CPULA 1/5/15 (среднее время нагрузки на CPU за последнюю 1 минуту: `avg(node_load1{job="node"})`, среднее время нагрузки на CPU за последние 5 минут: `avg(node_load5{job="node"})`, среднее время нагрузки на CPU за последние 15 минут: `avg(node_load15{job="node"})`):
+&#x1F53D;CPULA 1/5/15 (среднее время нагрузки на CPU за последнюю 1 минуту: `avg(node_load1{job="node"})`, среднее время нагрузки на CPU за последние 5 минут: `avg(node_load5{job="node"})`, среднее время нагрузки на CPU за последние 15 минут: `avg(node_load15{job="node"})`):
 
 ![vers](img/6_1_cpula_1_5_15.png)
 
-  - количество свободной оперативной памяти (общее количество RAM: `node_memory_MemTotal_bytes`, количество свободной RAM: `node_memory_MemFree_bytes`):
+&#x1F53D;количество свободной оперативной памяти (общее количество RAM: `node_memory_MemTotal_bytes`, количество свободной RAM: `node_memory_MemFree_bytes`):
 
 ![vers](img/7_1_ram_free.png)
 
-  - количество места на файловой системе (объём доступного пространства: `node_filesystem_avail_bytes`, объём раздела: `node_filesystem_size_bytes`):
+&#x1F53D;количество места на файловой системе (объём доступного пространства: `node_filesystem_avail_bytes`, объём раздела: `node_filesystem_size_bytes`):
 
 ![vers](img/8_1_fs.png)
 
-- Dashboard:
+&#x1F53D;Dashboard:
 
 ![vers](img/9_1_dashboard.png)
 
