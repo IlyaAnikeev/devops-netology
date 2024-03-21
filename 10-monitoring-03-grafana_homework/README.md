@@ -131,4 +131,4 @@
 
 ### Задание 4
 
-1. Сохранил Dashboard. Ссылка на файл «JSON MODEL»: 
+1. Сохранил Dashboard. Ссылка на файл «JSON MODEL»: https://github.com/IlyaAnikeev/devops-netology/blob/main/10-monitoring-03-grafana_homework/code/dashboard.json
