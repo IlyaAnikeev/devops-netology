@@ -79,7 +79,7 @@ Filebeat следует сконфигурировать для отправки
 
 - docker-compose манифест и yml-конфигурации для стека:
 
-
+https://github.com/IlyaAnikeev/devops-netology/tree/main/10-monitoring-04-elk_homework/code
 
 ## Задание 2
 
