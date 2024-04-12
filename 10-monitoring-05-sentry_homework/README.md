@@ -121,3 +121,7 @@ Free Cloud account имеет ограничения:
 
 ![vers](img/1_14_cb_no_error.png)
 
+7. В качестве решения задания предоставляю скриншот меню issues:
+
+![vers](img/1_15_Issues.png)
+
