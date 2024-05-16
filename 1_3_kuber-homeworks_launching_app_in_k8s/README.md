@@ -80,3 +80,5 @@
 ![vers](img/2_2.png)
 
 ![vers](img/2_3.png)
+
+![vers](img/2_4.png)
