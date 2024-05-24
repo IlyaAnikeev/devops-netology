@@ -1,0 +1,26 @@
+apiVersion : apps/v1
+kind: DaemonSet
+metadata:
+  name: read-log-daemoset
+  namespace: netology
+  labels:
+    app: read-log
+spec:
+  selector:
+    matchLabels:
+      app: read-log
+  template:
+    metadata:
+      labels:
+        app: read-log
+    spec:
+      containers:
+        - name: multitool
+          image: wbitt/network-multitool
+          volumeMounts:
+            - name: syslog
+              mountPath: /var/log/syslog
+      volumes:
+        - name: syslog
+          hostPath:
+            path: /var/log/syslog

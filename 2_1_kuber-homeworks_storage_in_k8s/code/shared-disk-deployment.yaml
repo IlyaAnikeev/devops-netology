@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shared-disk-deployment
+  namespace: netology
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shared-disk
+  template:
+    metadata:
+      labels:
+        app: shared-disk
+    spec:
+      containers:
+      - name: busybox
+        image: busybox:latest
+        command: ['sh', '-c', 'mkdir -p /shared && while true; do echo "$(date) - Test message every 5 seconds." >> /shared/log.txt; sleep 5; done']
+        volumeMounts:
+        - name: fs
+          mountPath: /shared
+      - name: multitool
+        image: wbitt/network-multitool
+        volumeMounts:
+        - name: fs
+          mountPath: /shared
+      volumes:
+      - name: fs
+        emptyDir:
+          sizeLimit: 1Gi    
