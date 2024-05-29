@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: homework-task-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: task-2
+  template:
+    metadata:
+      labels:
+        app: task-2
+    spec:  
+      containers:
+      - name: multitool
+        image: wbitt/network-multitool
+        volumeMounts:
+        - name: nfs
+          mountPath: /task-2
+      volumes:
+      - name: nfs
+        persistentVolumeClaim:
+          claimName: nfs-claim
