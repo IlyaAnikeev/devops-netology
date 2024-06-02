@@ -93,3 +93,5 @@
 ![vers](img/2_4.png)
 
 ![vers](img/2_5.png)
+
+![vers](img/2_6.png)
