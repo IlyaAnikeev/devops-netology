@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nmt-task-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: task-1
+  template:
+    metadata:
+      labels:
+        app: task-1
+    spec: 
+      containers:
+      - name: nginx
+        image: dockerhub.timeweb.cloud/library/nginx:1.26
+        ports:
+        - containerPort: 80        
+        volumeMounts:
+          - name: nginx-web-page
+            mountPath: /usr/share/nginx/html/
+      - name: multitool
+        image: dockerhub.timeweb.cloud/wbitt/network-multitool
+        ports:
+        - containerPort: 8080
+        env: 
+        - name: HTTP_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: nginx-configmap
+              key: HTTP_PORT
+      volumes:
+      - name: nginx-web-page
+        configMap:
+          name: nginx-configmap
