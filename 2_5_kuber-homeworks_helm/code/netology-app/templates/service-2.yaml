@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: multitool-svc-{{ include "netology-app.fullname" . }}
+spec:
+  selector:
+    app: multitool-{{ include "netology-app.fullname" . }}
+  ports:
+    - port: {{ .Values.multitool.service.port }}
+      targetPort: {{ .Values.multitool.service.targetPort }}
