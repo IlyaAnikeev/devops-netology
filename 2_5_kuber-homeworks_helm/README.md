@@ -77,7 +77,7 @@ multitool:
 
 ![vers](img/option_1/1_7_app_1_26.png)
 
-![vers](img/option_1/1_8_info_app1_2.png.png)
+![vers](img/option_1/1_8_info_app1_2.png)
 
 ------
 
