@@ -65,6 +65,45 @@ multitool:
     targetPort: 8080
 ```
 
+```sh
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multitool-{{ include "netology-app.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: multitool-{{ include "netology-app.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: multitool-{{ include "netology-app.fullname" . }}
+    spec:
+      containers:
+      - name: multitool-{{ include "netology-app.fullname" . }}
+        image: "{{ .Values.multitool.image.repository }}:{{ .Values.multitool.image.tag }}"
+        ports:
+          - containerPort: {{ .Values.multitool.image.port }}
+            protocol: TCP
+        env: 
+          - name: HTTP_PORT
+            value: "{{ .Values.multitool.image.env.HTTP_PORT }}"   
+```
+
+```sh
+apiVersion: v1
+kind: Service
+metadata:
+  name: multitool-svc-{{ include "netology-app.fullname" . }}
+spec:
+  selector:
+    app: multitool-{{ include "netology-app.fullname" . }}
+  ports:
+    - port: {{ .Values.multitool.service.port }}
+      targetPort: {{ .Values.multitool.service.targetPort }}
+```
+
 ![vers](img/option_1/1_2_lint.png)
 
 ![vers](img/option_1/1_3_create_app1.png)
