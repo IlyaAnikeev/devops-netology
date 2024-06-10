@@ -1,0 +1,2 @@
+Version {{ .Chart.Version }}
+Nginx version {{ .Chart.AppVersion }}

@@ -46,24 +46,11 @@
 
 ------
 
-## Вариант выполнения домашнего задания №1
+![vers](img/1_1_helm_create.png)
 
-![vers](img/option_1/1_1_helm_create.png)
+![vers](img/1_2_lint.png)
 
 Для выполнения задания создал 2 файла в директории netology-app\templates `deployment-2.yaml` и `service-2.yaml`. А также добавил код в `values.yaml`:
-
-```sh
-multitool:
-  image:
-    repository: wbitt/network-multitool
-    tag: latest
-    port: 8080
-    env:
-      HTTP_PORT: 8080
-  service:
-    port: 8080
-    targetPort: 8080
-```
 
 ```sh
 apiVersion: apps/v1
@@ -104,38 +91,23 @@ spec:
       targetPort: {{ .Values.multitool.service.targetPort }}
 ```
 
-![vers](img/option_1/1_2_lint.png)
+```sh
+multitool:
+  image:
+    repository: wbitt/network-multitool
+    tag: latest
+    port: 8080
+    env:
+      HTTP_PORT: 8080
+  service:
+    port: 8080
+    targetPort: 8080
+```
 
-![vers](img/option_1/1_3_create_app1.png)
+![vers](img/1_3_app1.png)
 
-![vers](img/option_1/1_4_app_1_22.png)
+![vers](img/1_4_app2.png)
 
-![vers](img/option_1/1_5_app_1_24.png)
+![vers](img/1_5_app3.png)
 
-![vers](img/option_1/1_6_create_app2.png)
-
-![vers](img/option_1/1_7_app_1_26.png)
-
-![vers](img/option_1/1_8_info_app1_2.png)
-
-------
-
-## Вариант выполнения домашнего задания №2
-
-![vers](img/option_2/1_1_helm_create.png)
-
-Для выполнения задания создал 3 файла в директории nginx `values_nginx1_app1.yaml`, `values_nginx2_app1.yaml` и `values_nginx3_app2.yaml`:
-
-![vers](img/option_2/2_1_app1.png)
-
-![vers](img/option_2/2_2_nginx1.png)
-
-![vers](img/option_2/2_3_nginx2.png)
-
-![vers](img/option_2/2_4.png)
-
-![vers](img/option_2/2_5_app2.png)
-
-![vers](img/option_2/2_6_nginx3.png)
-
-![vers](img/option_2/2_7.png)
+![vers](img/1_6_get_all.png)
