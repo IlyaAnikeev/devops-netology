@@ -51,7 +51,7 @@
 
 Выполнил сразу второе задание, так как оно соответствует первому, но с усложнением.
 
-1. С помощью terraform развернул инфраструктуру (3 - master node, 4 - worker node):
+1. С помощью terraform (https://github.com/IlyaAnikeev/devops-netology/tree/main/3_2_kuber-homeworks_install_k8s/code/terraform) развернул инфраструктуру (3 - master node, 4 - worker node):
 
 ![vers](img/1_1.png)
 
@@ -59,13 +59,13 @@
 
 ![vers](img/3_1.png)
 
-2. Развернул k8s-кластер с помощью репозитория Kubespray:
+2. Развернул k8s-кластер с помощью репозитория Kubespray (https://github.com/IlyaAnikeev/devops-netology/tree/main/3_2_kuber-homeworks_install_k8s/code/kubespray/inventory/mycluster):
 
 ![vers](img/4_1.png)
 
 ![vers](img/5_1.png)
 
-3. Запустил настроенный playbook по инструкции, который установил Keeplived и HAproxy с необходимыми параметрами:
+3. Запустил настроенный playbook (https://github.com/IlyaAnikeev/devops-netology/tree/main/3_2_kuber-homeworks_install_k8s/code/HA) по инструкции, который установил Keeplived и HAproxy с необходимыми параметрами:
 
 ![vers](img/6_1.png)
 
@@ -82,3 +82,41 @@
 ![vers](img/10_1.png)
 
 6. Кластер HA работает.
+
+7. Инструкция:
+
+```
+sudo apt-get update -y
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update -y
+sudo apt-get install git pip python3.11 -y
+
+sudo -i
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3.11 get-pip.py
+
+# RETURN TO USER
+git clone https://github.com/kubernetes-sigs/kubespray.git
+cd kubespray/
+pip3.11 install -r requirements.txt
+python3.11 -m pip install ruamel.yaml
+
+# Copy ``inventory/sample`` as ``inventory/mycluster``
+cp -rfp inventory/sample inventory/mycluster
+
+# Update Ansible inventory file with inventory builder
+declare -a IPS=(10.128.0.31 10.128.0.21 10.128.0.24)
+CONFIG_FILE=inventory/mycluster/hosts.yaml python3.11 contrib/inventory_builder/inventory.py ${IPS[@]}
+
+# Copy private ssh key to ansible host
+scp -i ~/.ssh/yandex yandex yc-user@51.250.10.123:.ssh/id_rsa
+sudo chmod 600 ~/.ssh/id_rsa
+
+ansible-playbook -i inventory/mycluster/hosts.yaml cluster.yml -b -v &
+
+
+mkdir ~/.kube
+sudo cp /etc/kubernetes/admin.conf ~/.kube/config
+sudo chown $(id -u):$(id -g) ~/.kube/config
+```
