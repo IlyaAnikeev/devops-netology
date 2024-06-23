@@ -65,11 +65,11 @@
 
 ![vers](img/5_1.png)
 
-3. Запустил настроенный playbook (https://github.com/IlyaAnikeev/devops-netology/tree/main/3_2_kuber-homeworks_install_k8s/code/HA) по инструкции, который установил Keeplived и HAproxy с необходимыми параметрами:
+3. Запустил настроенный playbook (https://github.com/IlyaAnikeev/devops-netology/tree/main/3_2_kuber-homeworks_install_k8s/code/HA) по инструкции, который установил keepalived и HAproxy с необходимыми параметрами:
 
 ![vers](img/6_1.png)
 
-4. IP-адрес 10.0.1.100 принадлежит Keeplived. Ноды имеют статус: master-1 - master, master-2 - backup, master-3 - backup. Остановил службу Keeplived на master-1 и проверил master-2. Статус ноды изменился:
+4. IP-адрес 10.0.1.100 принадлежит keepalived. Ноды имеют статус: master-1 - master, master-2 - backup, master-3 - backup. Остановил службу keepalived на master-1 и проверил master-2. Статус ноды изменился:
 
 ![vers](img/7_1.png)
 
