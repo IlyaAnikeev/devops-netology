@@ -1,0 +1,105 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-configmap-v1
+  namespace: netology
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Приветственная страница</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 600px;
+                margin: auto;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            p {
+                line-height: 1.5;
+                margin-bottom: 20px;
+            }
+            a {
+                color: blue;
+                text-decoration: none;
+                border-bottom: 1px solid blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1><center>Версия приложения: v1</center></h1>
+            <h1><center>Добро пожаловать!</center></h1>
+            <p><center>Это приветственная страница моего сайта созданная для выполнения домашнего задания: <a href="https://github.com/netology-code/kuber-homeworks/blob/main/3.4/3.4.md">«Обновление приложений»</a>.</center></p>
+            <p><center><a href="https://github.com/IlyaAnikeev">Обо мне</a></center></p>             
+            <p><center>© 2024, Аникеев Илья</center></p>
+        </div>
+    </body>
+    </html>
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-configmap-v2
+  namespace: netology
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Приветственная страница</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 600px;
+                margin: auto;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            p {
+                line-height: 1.5;
+                margin-bottom: 20px;
+            }
+            a {
+                color: blue;
+                text-decoration: none;
+                border-bottom: 1px solid blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1><center>Версия приложения: v2</center></h1>
+            <h1><center>Добро пожаловать!</center></h1>
+            <p><center>Это приветственная страница моего сайта созданная для выполнения домашнего задания: <a href="https://github.com/netology-code/kuber-homeworks/blob/main/3.4/3.4.md">«Обновление приложений»</a>.</center></p>
+            <p><center><a href="https://github.com/IlyaAnikeev">Обо мне</a></center></p>             
+            <p><center>© 2024, Аникеев Илья</center></p>
+        </div>
+    </body>
+    </html>

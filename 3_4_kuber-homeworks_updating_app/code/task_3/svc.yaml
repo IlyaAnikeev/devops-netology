@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc-v1
+  namespace: netology
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx-v1
+  ports:
+    - protocol: TCP
+      name: nginx-v1
+      port: 80
+      targetPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc-v2
+  namespace: netology
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx-v2
+  ports:
+    - protocol: TCP
+      name: nginx-v2
+      port: 80
+      targetPort: 80
