@@ -1,0 +1,29 @@
+resource "yandex_alb_load_balancer" "application-balancer" {
+  name                 = var.alb_load_balancer_name
+  network_id           = yandex_vpc_network.develop.id
+
+  allocation_policy {
+    location {
+      zone_id          = var.default_zone
+      subnet_id        = yandex_vpc_subnet.public.id
+    }
+  }
+
+  listener {
+    name               = var.alb_load_balancer_listener_name
+    endpoint {
+      address {
+        external_ipv4_address {
+        }
+      }
+      ports            = [ 80 ]
+    }
+    http {
+      handler {
+        http_router_id = yandex_alb_http_router.http-router.id
+      }
+    }
+  }
+
+ depends_on            = [yandex_alb_http_router.http-router] 
+}
