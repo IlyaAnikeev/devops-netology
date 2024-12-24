@@ -414,7 +414,7 @@ rbac:
 
 ---
 
-# ВСЕ ЗАДАНИЯ ДИМЛОМНОЙ РАБОТЫ ВЫПОЛНЕНЫ!!!
+# ВСЕ ЗАДАНИЯ ДИПЛОМНОЙ РАБОТЫ ВЫПОЛНЕНЫ!!!
 
 GitLab (https://gitlab.com/IlyaAnikeev/deploy-test-app)
 
