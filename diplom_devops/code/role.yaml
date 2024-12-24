@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: gitlab-runner-role
+  namespace: web-test-app
+rules:
+- apiGroups: [""]
+  resources: ["pods", "services"] # Добавьте ресурсы, которые вам нужны
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"] # Операции, которые разрешены
+- apiGroups: ["apps"]
+  resources: ["deployments"] # Добавьте ресурсы, которые вам нужны
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"] # Операции, которые разрешены
